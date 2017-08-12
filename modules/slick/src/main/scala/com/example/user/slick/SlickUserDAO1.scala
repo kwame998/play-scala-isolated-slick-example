@@ -22,8 +22,8 @@ import scala.language.implicitConversions
 @Singleton
 class SlickUserDAO @Inject()(db: Database)(implicit ec: ExecutionContext) extends UserDAO with Tables {
 
-  override val profile: JdbcProfile = _root_.slick.jdbc.H2Profile
-
+  //override val profile: JdbcProfile = _root_.slick.jdbc.H2Profile
+  override val profile: JdbcProfile = _root_.slick.jdbc.MySQLProfile
   import profile.api._
 
   private val queryById = Compiled(

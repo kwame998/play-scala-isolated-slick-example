@@ -11,6 +11,7 @@ addSbtPlugin("org.flywaydb" % "flyway-sbt" % "4.0")
 // https://github.com/tototoshi/sbt-slick-codegen
 addSbtPlugin("com.github.tototoshi" % "sbt-slick-codegen" % "1.2.0")
 
+libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.34"
 libraryDependencies += "com.h2database" % "h2" % "1.4.192"
 
 // The Play plugin
