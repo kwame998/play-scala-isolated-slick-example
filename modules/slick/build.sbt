@@ -12,15 +12,15 @@ libraryDependencies ++= Seq(
 
 )
 
-lazy val databaseUrl = sys.env.getOrElse("DB_DEFAULT_URL", "jdbc:h2:./test")
-lazy val databaseUser = sys.env.getOrElse("DB_DEFAULT_USER", "sa")
-lazy val databasePassword = sys.env.getOrElse("DB_DEFAULT_PASSWORD", "")
+lazy val databaseUrl = sys.env.getOrElse("DB_DEFAULT_URL", "jdbc:mysql://localhost/demo")
+lazy val databaseUser = sys.env.getOrElse("DB_DEFAULT_USER", "root")
+lazy val databasePassword = sys.env.getOrElse("DB_DEFAULT_PASSWORD", "my-secret-pw")
 
 
 slickCodegenSettings
-slickCodegenDatabaseUrl := "jdbc:mysql://localhost/demo"
-slickCodegenDatabaseUser := "root"
-slickCodegenDatabasePassword := "my-secret-pw"
+slickCodegenDatabaseUrl := databaseUrl
+slickCodegenDatabaseUser := databaseUser
+slickCodegenDatabasePassword := databasePassword
 slickCodegenDriver := slick.driver.MySQLDriver
 slickCodegenJdbcDriver := "com.mysql.jdbc.Driver"
 slickCodegenOutputPackage := "com.example.user.slick"

@@ -8,10 +8,10 @@ This project is configured to keep all the modules self-contained.
 * Database migration is done using [Flyway](https://flywaydb.org/), not Play Evolutions.
 * Slick's classes are auto-generated following database migration.
 
-## Database Migration
+## Database Migration use mysql
 
 ```
-sbt flyway/flywayMigrate
+//sbt flyway/flywayMigrate    //First temporarily does not support, need to manually create a mysql database and table
 ```
 
 ## Slick Code Generation
