@@ -15,4 +15,4 @@ libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.34"
 libraryDependencies += "com.h2database" % "h2" % "1.4.192"
 
 // The Play plugin
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.2")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.3")
